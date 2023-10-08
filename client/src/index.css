@@ -2,14 +2,12 @@
 
 #root {
     --font-family: Rubik, Verdana, sans-serif;
-    --primary: rgb(115, 2, 12);
-    --primary-hover: black;
-    --color: white;
+    --primary: rgb(167, 26, 255);
+    --primary-hover: rgb(159, 8, 252);
+    --color: black;
     --h1-color: var(--color);
     --h2-color: var(--color);
     --h3-color: var(--color);
-    --card-background-color: rgba(0, 0, 0, 0.8);
-    --card-sectionning-background-color: rgba(0, 0, 0, 0.8);
     --form-element-active-border-color: var(--color);
     --form-element-placeholder-color: gray;
 }
@@ -34,15 +32,16 @@
 
 #root [role=button], #root button, #root input[type=submit] {
     font-family: var(--font-family);
-    font-weight: 500;
+    font-weight: 400;
     text-transform: uppercase;
-    border: 2px solid transparent;
+    border: 5px solid transparent;
     margin: 10px;
+    padding: 5px 15px;
     width: max-content;
 }
 
 #root [role=button]:hover, #root button:hover, #root input[type=submit]:hover {
-    border: 2px solid var(--color);
+    border: 5px solid var(--color);
 }
 
 #root main {
@@ -53,7 +52,8 @@
 
 #root article {
     text-align: left;
-    margin-bottom: 5px;
+    margin: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 #root article header {
@@ -65,4 +65,18 @@
     border-top: 0px;
     margin-top: 0px;
     display: flex;
+}
+
+input {
+    margin-top: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+    #root {
+        --color: white;
+    }
+
+    #root article {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
 }

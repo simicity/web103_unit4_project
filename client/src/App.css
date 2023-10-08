@@ -10,3 +10,53 @@
     overflow-x: hidden;
     padding-bottom: 50px;
 }
+
+.horizontal-float-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vertical-float-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+details summary {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+details summary {
+    color: rgba(0, 0, 0, 0.7) !important;
+}
+
+details summary:focus {
+    color: rgba(0, 0, 0, 1.0) !important;
+}
+
+.option-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.option-label {
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+}
+
+@media (prefers-color-scheme: dark) {
+    details summary {
+        color: rgba(255, 255, 255, 0.7) !important;
+    }
+    
+    details summary:focus {
+        color: rgba(255, 255, 255, 1.0) !important;
+    }
+
+}

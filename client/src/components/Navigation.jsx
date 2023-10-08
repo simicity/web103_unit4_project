@@ -6,12 +6,12 @@ const Navigation = () => {
     return (
         <nav>
             <ul>
-                <li><h1>Bolt Bucket 🏎️</h1></li>
+                <li><h1>Koffee Bucket ☕</h1></li>
             </ul>
 
             <ul>
                 <li><a href='/' role='button'>Customize</a></li>
-                <li><a href='/customcars' role='button'>View Cars</a></li>
+                <li><a href='/customdrinks' role='button'>View Drinks</a></li>
             </ul>
             
         </nav>
