@@ -35,7 +35,7 @@ const EditDrink = () => {
         else newDrink[name] = value
         setDrink({
             ...newDrink,
-            price: calculatePrice(newDrink)
+            'price': calculatePrice(newDrink)
         })
     }
 
@@ -101,7 +101,7 @@ const EditDrink = () => {
                                 <div key={milk.name} className='vertical-float-section'>
                                     <img src={milk.image} alt="" className="option-img" />
                                     <label className='option-label'>{milk.name}</label>
-                                    <input type='radio' name='milk' checked={milk.name === drink.milk} onChange={handleChange} />
+                                    <input type='radio' name='milk' value={milk.name} checked={milk.name === drink.milk} onChange={handleChange} />
                                 </div>
                             ))}
                         </div>
@@ -116,7 +116,7 @@ const EditDrink = () => {
                                 <div key={spice.name} className='vertical-float-section'>
                                     <img src={spice.image} alt="" className="option-img" />
                                     <label className='option-label'>{spice.name}</label>
-                                    <input type='radio' name='spice' checked={spice.name === drink.spice} onChange={handleChange} />
+                                    <input type='radio' name='spice' value={spice.name} checked={spice.name === drink.spice} onChange={handleChange} />
                                 </div>
                             ))}
                         </div>
@@ -131,7 +131,7 @@ const EditDrink = () => {
                                 <div key={syrup.name} className='vertical-float-section'>
                                     <img src={syrup.image} alt="" className="option-img" />
                                     <label className='option-label'>{syrup.name}</label>
-                                    <input type='radio' name='syrup' checked={syrup.name === drink.syrup} onChange={handleChange} />
+                                    <input type='radio' name='syrup' value={syrup.name} checked={syrup.name === drink.syrup} onChange={handleChange} />
                                 </div>
                             ))}
                         </div>

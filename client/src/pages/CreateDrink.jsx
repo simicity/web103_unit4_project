@@ -34,7 +34,7 @@ const CreateDrink = () => {
         else newDrink[name] = value
         setDrink({
             ...newDrink,
-            price: calculatePrice(newDrink)
+            'price': calculatePrice(newDrink)
         })
     }
 
