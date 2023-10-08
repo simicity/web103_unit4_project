@@ -11,6 +11,7 @@ const CreateDrink = () => {
     const [milkOptions, setMilkOptions] = useState([])
     const [spiceOptions, setSpiceOptions] = useState([])
     const [syrupsOptions, setSyrupsOptions] = useState([])
+    const [showMissing, setShowMissing] = useState(false)
 
     const calculatePrice = (drink) => {
         let price = 4
@@ -39,6 +40,10 @@ const CreateDrink = () => {
 
     const createDrink = async (event) => {
         event.preventDefault()
+        if(drink.milk.length == 0 || drink.spice.length == 0 || drink.syrup.length == 0 || drink.name.length == 0) {
+            setShowMissing(true)
+            return
+        }
         await DrinksAPI.createDrink(drink)
         window.location = '/'
     }
@@ -81,7 +86,10 @@ const CreateDrink = () => {
             
             <div>
                 <details open>
-                    <summary>Milk</summary>
+                    <summary>
+                        Milk
+                        {showMissing && drink.milk.length == 0 && (<span className='warning-text'> Please select one.</span>)}
+                    </summary>
                     {milkOptions && milkOptions.map.length > 0 && (
                         <div className='grid'>
                             {milkOptions.map((milk) => (
@@ -96,7 +104,10 @@ const CreateDrink = () => {
                 </details>
 
                 <details>
-                    <summary>Spice</summary>
+                    <summary>
+                        Spice
+                        {showMissing && drink.spice.length == 0 && (<span className='warning-text'> Please select one.</span>)}
+                    </summary>
                     {spiceOptions && spiceOptions.map.length > 0 && (
                         <div className='grid'>
                             {spiceOptions.map((spice) => (
@@ -111,7 +122,10 @@ const CreateDrink = () => {
                 </details>
 
                 <details>
-                    <summary>Syrup</summary>
+                    <summary>
+                        Syrup
+                        {showMissing && drink.syrup.length == 0 && (<span className='warning-text'> Please select one.</span>)}
+                    </summary>
                     {syrupsOptions && syrupsOptions.map.length > 0 && (
                         <div className='grid'>
                             {syrupsOptions.map((syrup) => (
@@ -126,12 +140,15 @@ const CreateDrink = () => {
                 </details>
             </div>
 
-            <div>
-                <label htmlFor="iced">
-                    <input type="checkbox" name="iced" role="switch" onChange={handleChange} />
-                    {drink.iced ? 'Iced' : 'Hot'}
-                </label>
-                
+            <label htmlFor="iced">
+                <input type="checkbox" name="iced" role="switch" disabled={drink.syrup === 'Black Suger' || drink.syrup === 'Honey'} onChange={handleChange} />
+                {drink.iced ? 'Iced' : 'Hot'}
+                {(drink.syrup === 'Black Suger' || drink.syrup === 'Honey') && (
+                    <p className='warning-text'>Iced is not available for Black Sugar or Honey</p>
+                )}
+            </label>
+    
+            <div>            
                 <div className='horizontal-float-section'>
                     <p>Price: ${drink.price}</p>
                     <div className='horizontal-float-section'>
@@ -142,6 +159,7 @@ const CreateDrink = () => {
                     </div>
                 </div>
             </div>
+            {showMissing && drink.name.length == 0 && (<span className='warning-text'> Please name the drink.</span>)}
 
         </article>
     )

@@ -1,10 +1,10 @@
-# WEB103 Project 4 - *Name of App Here*
+# WEB103 Project 4 - Koffee Bucket
 
 Submitted by: Miho Shimizu
 
-About this web app: **App description here**
+About this web app: The app provides a fun and interactive way for coffee enthusiasts to experiment with different combinations, discover new flavors, and order (save) their personalized coffee drinks.
 
-Time spent: **X** hours
+Time spent: 8 hours
 
 ## Required Features
 
@@ -15,9 +15,9 @@ The following **required** functionality is completed:
   - [ ] **NOTE: Your GIF must include a view of your Railway database that shows the contents of the table used by your app**
 - [X] **The web app uses React to display data from the API**
 - [X] **Users can view a list of options they can select for different aspects of a `CustomCar`**
-- [ ] **On selecting each option, the displayed visual icon for the `CustomCar` updates to match the option the user chose**
+- [X] **On selecting each option, the displayed visual icon for the `CustomCar` updates to match the option the user chose**
 - [X] **The user can submit their choices to save the car to the list of created `CustomCar`**
-- [ ] **If a user submits a feature combo that is impossible, they should receive an appropriate error message and the item should not be saved to the database**
+- [X] **If a user submits a feature combo that is impossible, they should receive an appropriate error message and the item should not be saved to the database**
 - [X] **The app displays the total price of all features**
 - [X] **Users can view a list of all submitted `CustomCar`**
 - [X] **Users can edit or delete a submitted `CustomCar` from the list view of submitted `CustomCar`**
@@ -25,7 +25,7 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [ ] Selecting particular options prevents incompatible options from being selected even before form submission
+- [X] Selecting particular options prevents incompatible options from being selected even before form submission
 
 The following **additional** features are implemented:
 

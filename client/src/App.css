@@ -37,6 +37,24 @@ details summary:focus {
     color: rgba(0, 0, 0, 1.0) !important;
 }
 
+.option {
+    display: block;
+}
+
+.option:hover {
+    border: 3px solid var(--color);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.selected-option {
+    border: 3px solid var(--color);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
 .option-img {
     width: 80px;
     height: 80px;
@@ -48,6 +66,12 @@ details summary:focus {
 .option-label {
     font-size: 0.7rem;
     margin-bottom: 5px;
+}
+
+.warning-text {
+    color: red;
+    font-size: 0.7rem;
+    margin: 3px;
 }
 
 @media (prefers-color-scheme: dark) {
