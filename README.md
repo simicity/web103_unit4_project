@@ -12,7 +12,7 @@ The following **required** functionality is completed:
 
 <!-- Make sure to check off completed functionality below -->
 - [X] **The web app is connected to a PostgreSQL database, with an appropriately structured `CustomCar` table**
-  - [ ] **NOTE: Your GIF must include a view of your Railway database that shows the contents of the table used by your app**
+  - [X] **NOTE: Your GIF must include a view of your Railway database that shows the contents of the table used by your app**
 - [X] **The web app uses React to display data from the API**
 - [X] **Users can view a list of options they can select for different aspects of a `CustomCar`**
 - [X] **On selecting each option, the displayed visual icon for the `CustomCar` updates to match the option the user chose**
@@ -35,7 +35,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/WFWsRjp.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with [Kap](https://getkap.co/) for macOS
@@ -46,7 +46,7 @@ GIF created with [Kap](https://getkap.co/) for macOS
 
 ## Notes
 
-Describe any challenges encountered while building the app or any additional context you'd like to add.
+While the required functionalities are simple, it took me some time to design the database schemas and the frontend structure. 
 
 ## License
 
