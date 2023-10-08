@@ -23,12 +23,12 @@ const ViewDrinks = () => {
                 <div>
                     {drinks.map((drink) => (
                         <article key={drink.id}>
-                            <h3>{drink.name}</h3>
-                            <p>{drink.milk}</p>
-                            <p>{drink.spice}</p>
-                            <p>{drink.syrup}</p>
-                            <p>{drink.iced}</p>
-                            <p>{drink.price}</p>
+                            <h3>{drink.name} {drink.iced ? "❄️" : "🔥"} {` ($${drink.price})`}</h3>
+                            <div className='grid'>
+                                <p><b>🥛 Milk: </b>{drink.milk}</p>
+                                <p><b>🫚 Spice: </b>{drink.spice}</p>
+                                <p><b>🍯 Syrup: </b>{drink.syrup}</p>
+                            </div>
                             <a href={`/customdrinks/${drink.id}`} role='button'>Details</a>
                         </article>
                     ))}

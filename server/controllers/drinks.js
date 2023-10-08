@@ -2,7 +2,7 @@ import { pool } from '../config/database.js'
 
 const getDrinks = async (req, res) => {
   try {
-    const results = await pool.query('SELECT * FROM drinks ORDER BY id ASC')
+    const results = await pool.query('SELECT * FROM drinks ORDER BY id DESC')
     res.status(200).json(results.rows)
   } catch (error) {
     res.status(409).json( { error: error.message } )
